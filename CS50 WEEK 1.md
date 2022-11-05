@@ -139,5 +139,6 @@ make: *** [<builtin>: hello] Error 1
 
 > Since many of these tools like compilers were originally written years ago, their error messages are concise and not as user-friendly as we’d like, but in this case it looks like we need to close our string with a `"` on the same line.
 
+#### - `\n` is for creating a new line,is for using an ***escape sequence***, or a way to indicate a different expression within our string. In [[C]], escape sequences start with a backlash, `\` .
 
 
