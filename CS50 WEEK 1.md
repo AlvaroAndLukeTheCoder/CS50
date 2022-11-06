@@ -199,3 +199,58 @@ What's your name? David
 hello, answer
 $
 ```
+#### - We need to use more syntax:
+
+```C
+printf("hello, %s\n", answer);
+```
+###### - With `%s`, we are adding a placeholder for `printf` to format our string.
+
+### - IDEs for programming languages will helpfully highlight, different ideas in our code:
+
+![Highlighted syntax](https://cs50.harvard.edu/x/2022/notes/1/highlighting.png)
+
+###### - With this is easier for us to see the different components of our code and notice when we make a mistake.
+
+#### - We could also use the return value from `get_string` as an argument.
+
+```C
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, %s\n", get_string("What's your name? "));
+}
+```
+
+#### - But for most of people this might be harder to read and we aren't able to reuse the return value later.
+
+#### - `get_string` in **C** is a function that has a return value as output:
+
+![arguments-functions-return value](https://cs50.harvard.edu/x/2022/notes/1/return_value.png)
+
+# Main, Header Files and Commands
+
+#### - In **C**, `main` achieves a similar effect as the Scratch block "when the green flag is clicked".
+
+```
+int main(void)
+{
+
+}
+```
+
+###### - The curly braces, `{` `}`, surround the code that will run when our program is run as well.
+
+#### - ***Header Files***, like `stdio.h` tells our compiler which libraries to load in our compiler; a library store a lot of functions and features like `printf` that we can use in our code.
+
+#### - In [Linux](https://en.wikipedia.org/wiki/Linux "Linux"), there are commands we might use:
+
+* `cd`, for changing or current directory (**folder**)
+* `cp`, for copying files and directories
+* `ls`, for listing files in directory
+* `mkdir`, for making a directory
+* `mv`. for removing or renaming files and directories
+* `rm`, for removing(deleting) files
+* `rmdir`, for removing(deleting) directories
