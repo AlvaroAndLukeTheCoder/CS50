@@ -141,7 +141,9 @@ make: *** [<builtin>: hello] Error 1
 
 #### - `\n` is for creating a new line,is for using an ***escape sequence***, or a way to indicate a different expression within our string. In [[C]], escape sequences start with a backlash, `\` .
 
-- Writing a program to get a string from the user:
+#### - Writing a program to get a string from the user:
+
+```C
 #include <stdio.h>
 
 int main(void)
@@ -149,8 +151,12 @@ int main(void)
 	string answer = get_string("What's your name? ");
 	printf("hello, answer\n");
 }
-- We add a space instead of a new line (\n) after What's your name? so we can type our name in the same line.
-- When we compile make hello, we get a lot of errors:
+```
+
+##### - We add a space instead of a new line (`\n`) after `What's your name? ` so we can type our name in the same line.
+
+##### - When we compile `make hello`, we get a lot of errors:
+```
 $ make hello
 hello.c:5:5: error: use of undeclared identifier 'string'; did you mean 'stdin'?
     string answer = get_string("What's your name? ");
@@ -159,13 +165,20 @@ hello.c:5:5: error: use of undeclared identifier 'string'; did you mean 'stdin'?
 /usr/include/stdio.h:137:14: note: 'stdin' declared here
 extern FILE *stdin;             /* Standard input stream.  */
             ^
--hello.c:5:5 indicates that the error was found on line 5, character 5. It looks like a string isn't defined.
-- There're amount of functions or features that don't come with C so we need to load libraries.
-Library
-: is a common set of code that we can reuse and <stdio.h> refers to a library for standard input and output functions. With the line #include <stdio.h>, we're loading this library that contains printf.
-- We need to use another library called <cs50.h>, a library written by the CS50'staff, with helpful functions and definitions like string and get_string.
-Like this:
 ```
+
+###### -`hello.c:5:5` indicates that the error was found on line 5, character 5. It looks like a string isn't defined.
+
+#### - ***There're amount of functions or features that don't come with ***C*** so we need to load libraries.
+
+## Library
+### : is a common set of code that we can reuse and `<stdio.h>` refers to a library for standard input and output functions. With the line `#include <stdio.h>`, we're loading this library that contains `printf`. 
+
+#### - We need to use another library called `<cs50.h>`, a library written by the CS50'staff, with helpful functions and definitions like `string` and `get_string`.
+
+> Like this:
+
+```C
 #include <cs50.h>
 #include <stdio.h>
 
@@ -174,11 +187,12 @@ int main(void)
     string answer = get_string("What's your name? ");
     printf("hello, answer\n");
 }
-```
-
-- When we run our program, we see hello, answer printed literally:
 
 ```
+
+#### - When we run our program, we see `hello, answer` printed literally:
+
+``` 
 $ make hello
 $ ./hello
 What's your name? David
