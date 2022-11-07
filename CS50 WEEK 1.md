@@ -285,3 +285,42 @@ pset1/mario/ $
 ###### - We run a specific command to VS Code, `code mario.c`, to create a new file. We see it in the sidebar with our folders and files:
 
 ![Code Mario.c](https://cs50.harvard.edu/x/2022/notes/1/sidebar_mario.png)
+
+###### - To change our current directory to the parent directory, we can run `cd ..` We can up to levels at once with `cd ../..` as well:
+
+```
+pset1/mario/ $ cd ..
+pset1/ $ cd mario/
+pset1/mario/ $ cd ../..
+$
+```
+
+###### - We we run the command `cd` will also bring us back to our default directory:
+
+```
+pset1/mario/ $  cd
+$
+```
+
+# Types, Format Codes and Operators
+
+### - There are many Data Types we can use for our variables, which indicate to our program what type of data they represent:
+
+#### - `bool`, a Boolean expression of either `true` or `false`
+#### - `char`, a single character like `a` or `2`
+#### - `double`, a floating-point value with more digits than a `float`
+#### - `float`, a floating-point value, or real number with a decimal value
+#### - `int`, integers up to a certain size, or number of bits
+#### - `long`, integers with more bits, so they can count higher than an `int`
+#### - `string`, a string of characters
+#### - ....
+
+### - The CS50 library has corresponding functions to get input of various types:
+
+#### - `get_char` 
+#### - `get_double`
+#### - `get_float`
+#### - `get_int`
+#### - `get_long`
+#### - `get_string`
+#### - ....
