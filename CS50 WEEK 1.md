@@ -249,3 +249,39 @@ int main(void)
 * `mv`. for removing or renaming files and directories
 * `rm`, for removing(deleting) files
 * `rmdir`, for removing(deleting) directories
+
+#### We can use the GUI and the Terminal to be able to create new files and folders:
+
+###### With the terminal: 
+
+```
+$ mkdir pset1
+$ mkdir pset2
+$ ls
+hello*  hello.c  pset1/  pset2/
+$
+```
+
+###### -We'll run `mkdir` to create a new folder. Then we can run `ls` to see our current directory has the new folder.
+
+###### - Now, we can run `cd` to change our directory: (`cd`: change directory) : 
+
+```
+$ cd pset1/
+pset1/ $ ls
+pset1/ $
+```
+
+###### - We can make another directory with `mkdir` and change into it with the command `cd`:
+
+```
+pset1/ $ mkdir mario
+pset1/ $ ls
+mario/
+pset1/ $ cd mario/
+pset1/mario/ $
+```
+
+###### - We run a specific command to VS Code, `code mario.c`, to create a new file. We see it in the sidebar with our folders and files:
+
+![Code Mario.c](https://cs50.harvard.edu/x/2022/notes/1/sidebar_mario.png)
