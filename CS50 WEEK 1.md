@@ -1,8 +1,3 @@
----
-Lecture: 1
-Title: C
-Date: 2022-11-04
----
 # C
 ### -C is a programming language that has all the features of Scratch and a little less friendly since it's purely in text
 
