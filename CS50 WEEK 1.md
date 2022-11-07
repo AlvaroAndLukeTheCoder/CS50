@@ -324,3 +324,49 @@ $
 #### - `get_long`
 #### - `get_string`
 #### - ....
+
+### - For `printf`, too, there are different placeholders for each type called ***format codes***.
+
+#### - `%c` for chars
+#### - `%f` for floats or doubles
+#### - `%i` for integers
+#### - `%li` for long integers
+#### - `%s` for strings
+
+#### - There are several mathematical ***operators*** we can use, too:
+
+#### - `+` for addition
+#### - `-` for substraction
+#### - `*` for multiplication
+#### - `/` for division
+#### - `%` for remainder
+
+# Variables, syntactic sugar
+#### - We might create a variable called `counter` and set its value to `0` in [[CS50 WEEK 1#C|C]] with the following:
+
+```
+int counter = 0;
+```
+
+#### - And we can increase the value with: 
+
+```
+counter = counter + 1;
+```
+###### - In [[CS50 WEEK 1#C|C]] we’re taking the original value of `counter`, adding 1, and then assigning it into the left side, or updating the value of `counter`.
+###### - We don’t need to specify the type of `counter` again, since it’s been created already.
+###### -C also supports **syntactic sugar**, or shorthand expressions for the same functionality. We could equivalently say `counter += 1;` to add one to `counter` before storing it again. We could also just write `counter++;`, or even `counter--;` to subtract one.
+
+###### - Adding:
+```
+counter += 1;
+```
+
+```
+counter ++;
+```
+
+###### - Substracting: 
+```
+counter --;
+```
