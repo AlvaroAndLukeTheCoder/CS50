@@ -370,3 +370,100 @@ counter ++;
 ```
 counter --;
 ```
+# Calculations:
+
+#### - Let's create a new file with the command `code calculator.c` in the terminal. Then, we’ll add in the following code to the editor that’s opened for us, and save the file:
+
+```C
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int x = get_int("x: ");
+    int y = get_int("y: ");
+    printf("%i\n", x + y);
+}
+```
+
+#### -   We’ll prompt the user for two variables, `x` and `y`, and print out the sum, `x + y`, with a placeholder for integers, `%i`.
+#### - These shorter variable names are fine in this case, since we’re just using them as numbers without any other meaning.
+
+#### - We can compile and run the program with:
+
+```
+$ make calculator
+$ ./calculator
+x: 1
+y: 1
+2
+```
+
+#### - We change our program to use a third variable, `z`:
+
+```
+int z = x + y;
+printf("%i\n", z);
+```
+
+###### - This version gives us a reusable variable, but we might not intend on using the sum again in our program, so it might not necessarily be better.
+
+#### - We put comments (notes to ourselves that the compiler ignores) inside of our code. Comments start with, `//`:
+
+```
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user for x
+    int x = get_int("x: ");
+
+    // Prompt user for y
+    int y = get_int("y: ");
+
+    // Perform addition
+    printf("%i\n", x + y);
+}
+```
+
+###### - The Comments can be very useful for us when our code is to complicated, we’ll find these comments useful for reminding ourselves what and how our code is doing.
+
+#### - In the terminal window, we can also start typing commands like `make ca`, and then press the `tab` key for the terminal to automatically complete our command. The up and down arrows also allow us to see previous commmands and run them without typing them again.
+
+###### - We’ll compile our program to make sure we haven’t accidentally changed anything, since our comments should be ignored, and test it out:
+
+```
+$ make calculator
+$ ./calculator
+x: 1000000000
+y: 1000000000
+2000000000
+$ ./calculator
+x: 2000000000
+y: 2000000000
+-294967296
+```
+
+#### - As you can see, Data Types each use a fixed number of bits to store their values. An `int` in our virtual environment uses 32 bits, which can only contain about four billion (2<sup>32</sup>) different values. But since integers can be positive or negative, the highest positive value for an `int` can only be about two billion, with a lowest negative value of about negative two billion.
+
+#### - We can change our program to use `long` to use more bits:
+
+``` C
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    // Prompt user for x
+    long x = get_long("x: ");
+
+    // Prompt user for y
+    long y = get_long("y: ");
+
+    // Perform addition
+    printf("%li\n", x + y);
+}
+```
+
+###### - But we could still have a value that’s too large, which is a general problem we’ll discuss again later.
